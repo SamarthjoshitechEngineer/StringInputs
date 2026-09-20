@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .good{
+            width: 90px;
+            background-color: greenyellow;
+            border-radius: 2px;
+            border-width: 5px;
+            border-color: greenyellow;
+            cursor: pointer;
+        }
+        .good:hover{
+            background-color: rgb(7, 83, 7);
+        }
+        #loginform{
+            padding: 50px;
+            border:2px solid black;
+            border-radius: 8px;
+            background-color: white;
+        }
+        body{
+            font-style: italic;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+        }
+        .black{
+            margin-left: 235px;
+        }
+        .black:hover{
+            color: rgb(222, 15, 15);
+        }
+        h1{
+            color: white;
+            background-image:url("https://jooinn.com/images/beautiful-mountains-39.jpg");
+        }
+        .Reverse{
+            border-width: 5px;
+            border-color: rgb(50, 150, 238); ;
+            background-color: rgb(50, 150, 238);
+        }
+    </style>
+</head>
+<body>
+    <contain id="loginform">
+        <div>
+            <h1>WELCOME TO JOSHI FOUNDATION......!</h1>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required placeholder="Enter email Adress">
+        </div>
+        <br>
+        <div>
+             <label for="password">Password:</label>
+            <input type="password" id="password" required placeholder="Enter Password" minlength="10" maxlength="10" pattern="[0-9]{10}" title="Password must be 10 digits long">
+        </div>
+        <br>
+        <div>
+             <label for="Regnm">Registration Number:</label>
+            <input type="text" id="Regnm" required placeholder="Enter Registration Number" minlength="12" maxlength="12" pattern="[0-9A-Z]{12}" title="Register number must be 12 digits long">
+        </div>
+        <br>
+        <button type="Submit" class="good">Login</button>
+        <a href="register.html" class="black"><button type="new"class="Reverse">Back to Register</button></a>
+    </contain>
+    <script>
+           document.getElementById('loginform').addEventListener('Submit',function(event){
+           event.preventDefault();
+
+           const email=document.getElementById('email').value;
+           alert("Submitted email:"+email);
+        });
+    </script>
+</body>
+</html>
